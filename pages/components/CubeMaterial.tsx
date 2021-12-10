@@ -10,9 +10,9 @@ const CubeMaterial: FC<CubeMaterialProps> = (props) => {
 
   const texture = <canvasTexture attach="map" image={textureFace(color)} />
 
-  return <meshLambertMaterial attachArray="material">
+  return <meshStandardMaterial attachArray="material">
     { texture }
-  </meshLambertMaterial>
+  </meshStandardMaterial>
 }
 
 export default CubeMaterial

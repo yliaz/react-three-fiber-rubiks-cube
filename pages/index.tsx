@@ -37,9 +37,13 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Canvas camera={{position: [-5, 2, 400], fov: 60}} ref={canvas}>
-        {Mesh}
-      </Canvas>
+      {
+        process.browser
+          ? <Canvas camera={{position: [-300, 200, 300], fov: 60}} ref={canvas} dpr={Math.max(window.devicePixelRatio, 2)}>
+            {Mesh}
+          </Canvas>
+          : null
+      }
     </>
   )
 }

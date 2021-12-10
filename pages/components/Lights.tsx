@@ -3,7 +3,7 @@ import {FC} from 'react';
 const Lights: FC = () => {
   return (
     <>
-      <ambientLight intensity={0.3} />
+      <ambientLight color='0x404040' intensity={0.5} />
     </>
   )
 }
