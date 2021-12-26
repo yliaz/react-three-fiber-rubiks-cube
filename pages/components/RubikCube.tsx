@@ -55,31 +55,31 @@ const RubikCube: FC = () => {
 
   const [lastMovePoint, setLastMovePoint] = useState<Vector3 | null>(null)
 
-  useFrame(() => {
-    if (endPoint) {
-      resetParams()
-    }
-    console.log('useFrame')
-    if (isRotating && meshGroup.current && startPoint && movePoint && normalVector && movePoint !== lastMovePoint) {
-      console.log('rotating...')
-      setLastMovePoint(movePoint)
-      const sub = movePoint.sub(startPoint)
-      if (!touchParams.direction) {
-        const direction = getDirection(meshGroup.current, sub, normalVector) || null
-        setTouchParams(prevState => ({...prevState, direction: direction}))
-      }
-      const cubeIndex = getCubeIndex(startPoint, edgeLength)
-      if (touchParams.direction) {
-        const changedCubes = getChangedCubes(cubeIndex, touchParams.direction)
-        const meshGroupObject = meshGroup.current
-        if (meshGroupObject) {
-          const changedCubeObjects = meshGroupObject.children as Array<Mesh>
-          const result = changedCubeObjects.filter(cube => changedCubes.includes(getCubeIndex(cube.position, edgeLength)))
-          rotateAnimation(result, touchParams.direction)
-        }
-      }
-    }
-  })
+  // useFrame(() => {
+  //   if (endPoint) {
+  //     resetParams()
+  //   }
+  //   console.log('useFrame')
+  //   if (isRotating && meshGroup.current && startPoint && movePoint && normalVector && movePoint !== lastMovePoint) {
+  //     console.log('rotating...')
+  //     setLastMovePoint(movePoint)
+  //     const sub = movePoint.sub(startPoint)
+  //     if (!touchParams.direction) {
+  //       const direction = getDirection(meshGroup.current, sub, normalVector) || null
+  //       setTouchParams(prevState => ({...prevState, direction: direction}))
+  //     }
+  //     const cubeIndex = getCubeIndex(startPoint, edgeLength)
+  //     if (touchParams.direction) {
+  //       const changedCubes = getChangedCubes(cubeIndex, touchParams.direction)
+  //       const meshGroupObject = meshGroup.current
+  //       if (meshGroupObject) {
+  //         const changedCubeObjects = meshGroupObject.children as Array<Mesh>
+  //         const result = changedCubeObjects.filter(cube => changedCubes.includes(getCubeIndex(cube.position, edgeLength)))
+  //         rotateAnimation(result, touchParams.direction)
+  //       }
+  //     }
+  //   }
+  // })
 
   const rotateAnimation = (cubes: Mesh[], direction: number) => {
     let rotateMatrix = new Matrix4();//旋转矩阵

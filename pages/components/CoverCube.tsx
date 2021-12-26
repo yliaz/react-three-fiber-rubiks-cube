@@ -20,10 +20,6 @@ const CoverCube: FC<CoverCubeProps> = (props) => {
 
   const boxWidth = edgeLength * number + 0.00001
 
-  useFrame(() => {
-
-  })
-
   const onTouchStart = (event: ThreeEvent<PointerEvent>) => {
     // event.stopPropagation()
     if (!isRotating && event.intersections[1]) {
