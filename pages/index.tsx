@@ -6,7 +6,6 @@ import {useEffect, useRef} from 'react';
 import { render, events } from '@react-three/fiber'
 import Lights from './components/Lights';
 
-
 const Home: NextPage = () => {
 
   const canvas = useRef<HTMLCanvasElement | null>(null)
@@ -15,7 +14,7 @@ const Home: NextPage = () => {
     <>
       <Lights />
       <RubikCube />
-      <OrbitControls enableDamping={true} />
+      {/*<OrbitControls enableDamping={true} />*/}
     </>
   )
 
@@ -25,7 +24,6 @@ const Home: NextPage = () => {
       canvas.current.style.height = `${window.innerHeight}px`
     }
     window.addEventListener('resize', () => {
-      console.log('width: ', window.innerWidth, 'height: ', window.innerHeight)
       if (canvas.current) {
         render(Mesh, canvas.current, {
           events,
@@ -39,8 +37,14 @@ const Home: NextPage = () => {
     <>
       {
         process.browser
-          ? <Canvas camera={{position: [-300, 200, 300], fov: 60}} ref={canvas} dpr={Math.max(window.devicePixelRatio, 2)}>
+          ? <Canvas
+            camera={{position: [300, 200, 300], fov: 60}}
+            ref={canvas}
+            dpr={Math.max(window.devicePixelRatio, 2)}
+          >
             {Mesh}
+            <axesHelper args={[100]} />
+            <OrbitControls />
           </Canvas>
           : null
       }

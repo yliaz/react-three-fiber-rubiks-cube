@@ -556,7 +556,7 @@
   resolved "https://registry.npmmirror.com/@use-gesture/core/download/@use-gesture/core-10.2.2.tgz#80e5e5ec6551bcca66f5d9a3302744b0979caf0f"
   integrity sha512-jIaKSHsruYcFEhUHVoFYLuucIVTx1QjUc8CEHD+SPZtwpY8kBPG0lHeNd6ZpX01llBaEygm3cPWFm+SstjTRoQ==
 
-"@use-gesture/react@^10.2.0":
+"@use-gesture/react@^10.2.0", "@use-gesture/react@^10.2.2":
   version "10.2.2"
   resolved "https://registry.npmmirror.com/@use-gesture/react/download/@use-gesture/react-10.2.2.tgz#3cb5023a5182872863fcb6a7be2a936e5f58e184"
   integrity sha512-ZRi/xAm/LWfWuAY3IKwCjdXylXAVIubcj3j100KcTdGPqfxxyYUhoT7bNOMMWu8H3oWiXbdwvZ90Wd5f/KfHMA==
@@ -1288,6 +1288,14 @@ encoding@0.1.13:
   dependencies:
     iconv-lite "^0.6.2"
 
+enhanced-resolve@^5.7.0:
+  version "5.8.3"
+  resolved "https://registry.nlark.com/enhanced-resolve/download/enhanced-resolve-5.8.3.tgz?cache=0&sync_timestamp=1632130840337&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fenhanced-resolve%2Fdownload%2Fenhanced-resolve-5.8.3.tgz#6d552d465cce0423f5b3d718511ea53826a7b2f0"
+  integrity sha1-bVUtRlzOBCP1s9cYUR6lOCansvA=
+  dependencies:
+    graceful-fs "^4.2.4"
+    tapable "^2.2.0"
+
 enquirer@^2.3.5:
   version "2.3.6"
   resolved "https://registry.npm.taobao.org/enquirer/download/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
@@ -1785,7 +1793,7 @@ glsl-noise@^0.0.0:
   resolved "https://registry.npm.taobao.org/glsl-noise/download/glsl-noise-0.0.0.tgz#367745f3a33382c0eeec4cb54b7e99cfc1d7670b"
   integrity sha1-NndF86MzgsDu7Ey1S36Zz8HXZws=
 
-graceful-fs@^4.1.2:
+graceful-fs@^4.1.2, graceful-fs@^4.2.4:
   version "4.2.8"
   resolved "https://registry.npmmirror.com/graceful-fs/download/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha1-5BK40z9eAGWTy9PO5t+fLOu+gCo=
@@ -2329,6 +2337,14 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/natural-compare/download/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
+
+next-transpile-modules@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.npmmirror.com/next-transpile-modules/download/next-transpile-modules-9.0.0.tgz#133b1742af082e61cc76b02a0f12ffd40ce2bf90"
+  integrity sha1-EzsXQq8ILmHMdrAqDxL/1Aziv5A=
+  dependencies:
+    enhanced-resolve "^5.7.0"
+    escalade "^3.1.1"
 
 next@12.0.7:
   version "12.0.7"
@@ -3218,6 +3234,11 @@ supports-color@^8.0.0:
   integrity sha1-zW/BfihQDP9WwbhsCn/UpUpzAFw=
   dependencies:
     has-flag "^4.0.0"
+
+tapable@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.nlark.com/tapable/download/tapable-2.2.1.tgz?cache=0&sync_timestamp=1631526982870&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftapable%2Fdownload%2Ftapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
+  integrity sha1-GWenPvQGCoLxKrlq+G1S/bdu7KA=
 
 text-table@^0.2.0:
   version "0.2.0"

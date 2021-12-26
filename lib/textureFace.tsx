@@ -16,7 +16,6 @@ const textureFace = (rgbaColor: string) => {
     context.stroke();
     context.fill();
   }
-  console.log(context)
   return canvas;
 }
 
